@@ -1,0 +1,9 @@
+INSTRUMENT <Numéro de l'instrument>	-> En en-tête, spécifie le numéro de l'instrument
+LECTURE					-> Lance la lecture de l'instrument
+PAUSE					-> Met en pause l'instrument
+STOP					-> Arrête l'instrument
+VOLUME <v en %>				-> Change le volume de l'instrument
+POSITION <x> <y> <z>			-> Change la position de l'instrument
+DIRECTION <x> <y> <z>			-> Change la direction de l'instrument
+QUITTER					-> Fait quitter l'instrument de l'orchestre
+ATTENTE <n en secondes>			-> Met une attente entre deux actions

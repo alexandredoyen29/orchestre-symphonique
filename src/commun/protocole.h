@@ -1,0 +1,32 @@
+#ifndef PROTOCOLE_H
+#define PROTOCOLE_H
+
+typedef enum action
+{
+	LANCER_L_INSTRUMENT,
+	METTRE_EN_PAUSE_L_INSTRUMENT,
+	ARRETER_L_INSTRUMENT,
+	AVOIR_LA_LISTE_DES_INSTRUMENTS,
+	CHANGER_LE_VOLUME_DE_L_INSTRUMENT,
+	CHANGER_LA_POSITION_DE_L_INSTRUMENT,
+	CHANGER_LA_DIRECTION_DE_L_INSTRUMENT,
+	SUPPRIMER_L_INSTRUMENT,
+	ACTION_INCONNUE,
+	AVOIR_LE_VOLUME_DE_L_INSTRUMENT,
+	AVOIR_LA_POSITION_DE_L_INSTRUMENT,
+	AVOIR_LA_DIRECTION_DE_L_INSTRUMENT
+} t_action;
+
+typedef struct instrumentCommande
+{
+	t_action actionDemandee;
+	int idInstrument;
+
+	union
+	{
+		float scalaire;
+		float vecteur[3];
+	};
+} t_instrumentCommande;
+
+#endif
